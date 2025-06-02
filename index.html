@@ -73,6 +73,54 @@
       .phx-text { font-size: 1.3em; }
       .bird { width: 60px; height: 60px; }
     }
+    .phx-buttons {
+  display: flex;
+  gap: 18px;
+  margin: 24px 0 0 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.phx-btn {
+  padding: 14px 28px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  background: linear-gradient(90deg,#5f6cff 70%,#a259ff 100%);
+  color: #fff;
+  box-shadow: 0 3px 18px #5f6cff44;
+  transition: transform 0.18s, box-shadow 0.18s;
+  animation: phx-bounce 1.6s infinite alternate;
+  outline: none;
+}
+.phx-btn.ecram {
+  background: linear-gradient(90deg,#ff6f00 70%,#ffd54f 100%);
+  color: #23272a;
+  animation-delay: 0.8s;
+}
+@keyframes phx-bounce {
+  0% { transform: scale(1) translateY(0);}
+  40% { transform: scale(1.05) translateY(-7px);}
+  100% { transform: scale(1) translateY(0);}
+}
+.phx-btn:active {
+  transform: scale(0.96);
+}
+@media (max-width: 600px) {
+  .phx-buttons {
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    margin-top: 18px;
+  }
+  .phx-btn {
+    width: 94vw;
+    max-width: 370px;
+    font-size: 1em;
+    padding: 12px 0;
+  }
+}
   </style>
 </head>
 <body>
@@ -110,6 +158,10 @@
     <div class="phx-text">PH03n1x was here..</div>
     <div class="phx-sub">This is a temporary GitHub Pages site.<br>Come back soon for something awesome!</div>
   </div>
+  <div class="phx-buttons">
+  <button class="phx-btn solyana">for Solyana</button>
+  <button class="phx-btn ecram">for Ecram</button>
+</div>
   <div class="footer">
     &copy; 2025 PH03n1x &mdash; <a href="https://github.com/" style="color:#5f6cff;text-decoration:none;">GitHub</a>
   </div>
